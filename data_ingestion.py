@@ -41,10 +41,10 @@ def load_to_database(df):
 def main():
     print("Khởi động hệ thống Ingestion Pipeline (PostgreSQL)...")
     while True:
-        raw_data = fetch_stream_data(batch_size=1000)
+        raw_data = fetch_stream_data(batch_size=15)
         enriched_df = transform_and_enrich(raw_data)
         load_to_database(enriched_df)
-        time.sleep(0.2)
+        time.sleep(1)
 
 if __name__ == "__main__":
     main()
