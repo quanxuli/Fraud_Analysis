@@ -1,4 +1,4 @@
-# 🚨 FraudGuard: Enterprise Data Pipeline & ML for Financial Fraud Detection
+# FraudGuard: Enterprise Data Pipeline & ML for Financial Fraud Detection
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-009688.svg)
@@ -6,10 +6,10 @@
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-F7931E.svg)
 ![PowerBI](https://img.shields.io/badge/Power_BI-Dashboard-F2C811.svg)
 
-## 📌 Executive Summary
+## Executive Summary
 This project simulates an enterprise-grade Data Engineering and Machine Learning pipeline designed for the financial sector. It ingests simulated high-frequency core banking transactions, processes them in real-time, stores them in a robust PostgreSQL data warehouse, and applies both **Advanced SQL Business Rules** and **Unsupervised Machine Learning** to detect fraudulent activities and optimize operational costs.
 
-## 🏗️ Data Architecture & Pipeline
+## Data Architecture & Pipeline
 
 The system is built on a modern, decoupled architecture:
 
@@ -25,7 +25,7 @@ The system is built on a modern, decoupled architecture:
                                         (Scikit-Learn Isolation Forest)
 ```
 
-## 🚀 Core Features & Business Value
+## Core Features & Business Value
 
 ### 1. Real-Time Data Ingestion (ETL)
 * Built a custom **FastAPI** server to mock a core banking streaming endpoint.
@@ -45,7 +45,7 @@ Implemented complex business rules using SQL `Window Functions` and `CTEs`:
 * Deployed an Unsupervised Learning model (**Isolation Forest**) to detect hidden fraud patterns without relying on hard-coded SQL rules.
 * Engineered features (One-Hot Encoding, StandardScaler) and scored millions of transactions, outputting a normalized `Risk Score (0-100)` back to the database for BI consumption.
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```bash
 ├── data/
@@ -58,7 +58,7 @@ Implemented complex business rules using SQL `Window Functions` and `CTEs`:
 └── README.md
 ```
 
-## ⚙️ How to Run Locally
+## How to Run Locally
 
 **1. Database Setup:**
 Ensure PostgreSQL is running locally and create a blank database named `fraud_db`. Update the `DB_URL` credentials in the Python scripts.
@@ -84,7 +84,7 @@ pip install fastapi uvicorn pandas scikit-learn sqlalchemy psycopg2-binary tqdm 
   python fraud_ml_pipeline.py
   ```
 
-## 📊 Business Intelligence (Power BI)
+## Business Intelligence (Power BI)
 To visualize the data, connect Power BI to the local PostgreSQL database using **DirectQuery** mode. Connect to the `ml_scored_transactions` table to build risk distribution histograms and real-time fraud watchlists.
 
 ---
