@@ -23,7 +23,7 @@ The system is built on a modern, decoupled architecture:
                                                         v
                                           [Machine Learning Pipeline]
                                         (Scikit-Learn Isolation Forest)
-
+```
 🚀 Core Features & Business Value
 1. Real-Time Data Ingestion (ETL)
 Built a custom FastAPI server to mock a core banking streaming endpoint.
